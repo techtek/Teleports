@@ -1,0 +1,763 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+	    
+	 <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+         <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />    
+	    
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Teleports - Steem Dapps to Android Phones Tablets & TV's </title>
+        <meta name="description" content="Teleports Steem Dapps to Android Phones Tablets & TV apps">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108824684-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-108824684-1');
+</script>
+
+		
+        <!-- CSS Dependencies -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/shards.min.css?version=2.0.1">
+        <link rel="stylesheet" href="css/shards-extras.min.css?version=2.0.1">
+		<link rel="stylesheet" href="css/counter.css">
+		
+	<!-- Countdown till next payout script -->	
+<style>
+
+
+
+body {
+  background: #111;
+  background: black;
+}
+
+
+.glow {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(-3% - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  -webkit-animation: glow 15s linear 0s infinite forwards;
+  background: url('https://t0.rbxcdn.com/182160a5d7d68c6d4be14a6d9f9e5598');
+  background-size: contain;
+}
+
+.particles {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(-3% - 50px);
+  width: 200px;
+  height: 200px;
+  
+}
+
+.rotate {
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 10px;
+}
+
+.angle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.size {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.position {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.particle {
+  position: absolute;
+  top: calc(20% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+/*   background: url('https://t0.rbxcdn.com/182160a5d7d68c6d4be14a6d9f9e5598'); */
+  background: url('http://www.officialpsds.com/images/thumbs/shine-light-bright-psd43123.png');
+  
+  background-size: contain;
+}
+
+.rotate {
+  -webkit-animation: rotate 5s linear 0s infinite alternate;
+}
+
+.pulse{
+  -webkit-animation: pulse 5.5s linear 0s infinite alternate;
+}
+
+
+@-webkit-keyframes glow {
+  0% {
+    transform: scale(2) rotate(0deg);
+    filter: brightness(100%) saturate(50%) hue-rotate(0deg) opacity(100%);
+    
+  }
+  25% {
+    transform: scale(1.8) rotate(90deg);
+    filter: brightness(100%) saturate(50%) hue-rotate(0deg) opacity(100%);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+    filter: brightness(100%) saturate(100%) hue-rotate(0deg) opacity(100%);
+  }
+  75% {
+    transform: scale(1.8) rotate(270deg);
+    filter: brightness(100%) saturate(50%) hue-rotate(0deg) opacity(100%);
+  }
+  100% {
+    transform: scale(1.8) rotate(360deg);
+    filter: brightness(150%) saturate(100%) hue-rotate(0deg) opacity(100%);
+    
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes angle {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes size {
+  0% {
+    -webkit-transform: scale(.1);
+  }
+  100% {
+    -webkit-transform: scale(.6);
+  }
+}
+
+@-webkit-keyframes position {
+  0% {
+    -webkit-transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+  50 %{
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate3d(150px,150px,0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(.5);
+  }
+}
+
+@-webkit-keyframes particle {
+  from {
+    transform: scale(1);
+    filter: brightness(200%) hue-rotate(0deg);
+    
+  }
+  to {
+    transform: scale(1.1);
+    filter: brightness(100%) hue-rotate(50deg);
+    
+  }
+}
+
+
+
+.rotate .angle:nth-child(1){
+  /* change the angle every 2 seconds */
+  -webkit-animation: angle 10s steps(5) 0s infinite;
+}
+.rotate .angle:nth-child(1) .size{
+  /* change the size of the particle every 2 seconds */
+  -webkit-animation: size 10s steps(5) 0s infinite;
+}
+.rotate .angle:nth-child(1) .particle{
+  /* animate the glow and change the color every 2 seconds */
+  -webkit-animation: particle 6s linear infinite alternate;
+}
+.rotate .angle:nth-child(1) .position{
+  /* animate the fly out of the particle and its fade out at the end */
+  -webkit-animation: position 2s linear 0s infinite;
+}
+
+
+
+.rotate .angle:nth-child(2){
+  /* change the angle every 2 seconds */
+  -webkit-animation: angle 4.95s steps(3) -1.65s infinite;
+}
+.rotate .angle:nth-child(2) .size{
+  /* change the size of the particle every 2 seconds */
+  -webkit-animation: size 4.95s steps(3) -1.65s infinite alternate;
+}
+.rotate .angle:nth-child(2) .particle{
+  /* animate the glow and change the color every 2 seconds */
+  -webkit-animation: particle 4.95s linear -3.3s infinite alternate;
+}
+.rotate .angle:nth-child(2) .position{
+  /* animate the fly out of the particle and its fade out at the end */
+  -webkit-animation: position 1.65s linear 0s infinite;
+}
+
+
+.rotate .angle:nth-child(3){
+  /* change the angle every 2 seconds */
+  -webkit-animation: angle 13.76s steps(8) -6.88s infinite;
+}
+.rotate .angle:nth-child(3) .size{
+  /* change the size of the particle every 2 seconds */
+  -webkit-animation: size 6.88s steps(4) -5.16s infinite alternate;
+}
+.rotate .angle:nth-child(3) .particle{
+  /* animate the glow and change the color every 2 seconds */
+  -webkit-animation: particle 5.16s linear -1.72 infinite alternate;
+}
+.rotate .angle:nth-child(3) .position{
+  /* animate the fly out of the particle and its fade out at the end */
+  -webkit-animation: position 1.72s linear 0s infinite;
+}
+
+.rotate .angle:nth-child(5) .position{
+  /* animate the fly out of the particle and its fade out at the end */
+  -webkit-animation: position 2.45s linear 0s infinite;
+}
+}
+</style>
+		
+		
+
+	
+	<style>
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0095ff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+	
+	
+	
+	
+	
+
+
+
+
+
+		
+		
+    </head>
+    <body class="shards-app-promo-page--1">
+	
+	<body onload = "getSeconds()">
+	
+      <!-- Welcome Section -->
+      <div class="welcome d-flex justify-content-center flex-column">
+        <div class="container">
+          <!-- Navigation -->
+          <nav class="navbar navbar-expand-lg navbar-dark pt-4 px-0">
+            <a class="navbar-brand mr-5" href="#">
+              <img src="images/app-promo/teleports-logo.png" class="mr-2" height="80" alt="Teleports Steem Dapps to Android">
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+				
+								<li class="nav-item">
+                  <a class="nav-link" href="#games" ><i class="fas fa-gamepad"></i>&nbsp Games </a>
+                </li>
+				
+				<li class="nav-item">
+                  <a class="nav-link" href="#tools" ><i class="fas fa-toolbox"></i>&nbsp Tools </a>
+                </li>				
+				
+                <li class="nav-item">
+                  <a class="nav-link" href="https://steemit.com/@teleports" target="_blank"><i class="fas fa-link"></i>&nbsp Teleports </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://github.com/techtek" target="_blank"><i class="fab fa-github"></i>&nbsp Github </a>
+                </li>
+								
+				<li class="nav-item">
+                 
+                </li>
+				<li class="nav-item">
+				
+
+
+			</li>	
+              </ul>
+
+              <!-- Social Icons -->
+			  
+			  <ul class="header-social-icons navbar-nav ml-auto">
+                <li class="nav-item">                  	
+                </li>
+                <li class="nav-item">                 
+                </li>               
+              </ul>
+			  
+
+            </div>
+          </nav>
+
+          <!-- / Navigation -->
+        </div> <!-- .container -->
+
+        <!-- Inner Wrapper -->
+        <div class="inner-wrapper mt-auto mb-auto container">
+		
+          <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-12 mt-auto mb-auto mr-3">
+                <!-- <h1 class="welcome-heading display-4 text-white">Teleports</h1> --> 
+				
+                <p class="text-muted">The Teleports project brings you the most popular, useful, fun and rewarding DAPP websites from the Steem Blockchain, and teleports them into Android apps. The released apps are compatible with Android phones, tablets & tv's.
+				To use some of the Teleports apps you need to have a free <a href="https://signup.steemit.com/" target="_blank" >Steem account.</a></p>
+
+				<p class="text-muted">The released Teleports apps are free to try, but if you like and use them on a regular base, and want to help the further development, 
+				then please donate 2 or more STEEM with <a href="https://fundition.io/#!/@techtek/xld7y2k12"target="_blank" >Fundition,</a> or send a transfer to <a href="https://app.steemconnect.com/sign/transfer?to=teleports&amount=2+STEEM&memo=New%20donation" target="_blank" >@teleports.</a> and you then are free to use them as often as you want. </p>
+				
+				<a class="btn btn-outline-success btn-pill" href="https://signup.steemit.com/" target="_blank">Create Steem account →</a>
+				
+                <div class="d-block mt-4">
+                  <a href="https://steem.io/" target="_blank"><img class="w-25 mt-2" src="images/app-promo/badge-steem.png" alt="Get it on Google Play Store"></a>
+				  <a href="https://steemit.com/@teleports" target="_blank"><img class="w-25 mt-2" src="images/app-promo/badge-steemit.png" alt="Get it on Google Play Store"></a>
+				  <a href="https://fundition.io/#!/@techtek/xld7y2k12" target="_blank"><img class="w-25 mt-2" src="images/app-promo/badge-fundition.png" alt="Get it on Google Play Store"></a>
+				  <a href="#games"><img class="w-25 mt-2" src="images/app-promo/badge-android.png"  alt="works with Android"></a>
+				  <br></br> 
+                </div>
+				
+            </div>
+
+            <div class="col-lg-4 col-md-5 col-sm-12 ml-auto">
+              <img class="iphone-mockup ml-auto" src="images/app-promo/android-app-mockup.png" alt="Teleports Steem Dapps to Android apps">
+	   
+			  	
+             </div>
+			
+          </div>
+			<center>
+				<p> Steem dapps to Android phones tablets & tv's </p>
+				</center>
+		
+        </div>
+		
+		
+
+				
+				
+		
+        <!-- / Inner Wrapper -->
+
+						<!-- / time until next payout -->				  
+
+      </div>
+	        <!-- / Welcome Section -->
+
+	  
+	 
+<div class="glow"></div>
+<div class="particles">
+
+    <div class="rotate">
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+
+	  		
+	
+
+<style>
+.fa-gamepad{
+    opacity:0.3;
+}
+
+.fa-toolbox{
+    opacity:0.3;
+}
+
+.fa-github{
+    opacity:0.3;
+}
+
+.fa-link{
+    opacity:0.3;
+}
+</style>
+
+
+	
+   <!-- Our Blog Section -->
+      <A NAME="games">
+      <div class="blog section section-invert py-4"> 
+	  			
+       
+		<h3 class="section-title text-center m-5">Games</h3>
+		
+        <div class="container">
+          <div class="py-4">
+            <div class="row">
+              <div class="card-deck">
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">DrugWars</h4>
+					  <a href="https://drugwars.io" target="_blank">https://drugwars.io</a> 
+					  <br></br>
+                      <p class="card-text">Simulation and strategy game based on the Steem blockchain with the possibility to earn rewards while having fun.</p>
+                      <a class="btn btn-outline-success btn-pill" href="https://github.com/techtek/Teleports/raw/master/apk/Teleports-DrugWars-v1.apk" target="_blank">Download</a>
+					  <a class="btn btn-outline-success btn-pill" href="http://drugwars.io" target="blank" style="float: right;" >Play now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">MagicDice</h4>
+					   <a href="https://magic-dice.com" target="_blank">https://magic-dice.com</a> 
+					   <br></br>
+                      <p class="card-text">Fun and provably fair and transparent dice game, and the most popular dice game on Steem.</p>
+                      <a class="btn btn-outline-success btn-pill" href="https://" target="_blank">Soon</a>
+					  <a class="btn btn-outline-success btn-pill" href="https://magic-dice.com" target="blank" style="float: right;">Play now</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">SteemMonsters</h4>
+					  <a href="https://steemmonsters.com" target="_blank">https://steemmonsters.com</a>
+					  <br></br>
+                      <p class="card-text">A decentralized collectible trading card game built and run entirely on blockchain technology.</p>
+                      <a class="btn btn-outline-success btn-pill" href="https://steemit.com/@teleports" target="_blank"> soon</a>
+					  <a class="btn btn-outline-success btn-pill" href="https://steemmonsters.com" target="blank" style="float: right;">Play now</a>
+                   
+				   </div>
+									
+                  </div>
+				  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / Our Blog Section -->
+
+
+	  
+	 <!-- Our Blog Section -->
+	  <A NAME="tools">
+      <div class="blog section section-invert py-4"> 
+	  			
+				
+ 		
+
+        <h3 class="section-title text-center m-5">Tools</h3>
+		
+        <div class="container">
+          <div class="py-4">
+            <div class="row">
+              <div class="card-deck">
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Dapp tool 1</h4>
+					  <p class="card-text">Introduction text</p>
+					  <br></br>
+                      <a class="btn btn-outline-success btn-pill" href="https://" target="_blank">Soon &rarr;</a>
+					  <a class="btn btn-outline-success btn-pill" href="https://" style="float: right; target="_blank">Try now &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Dapp tool 2</h4>
+                      <p class="card-text">Introduction text</p>
+					  <br></br>
+                      <a class="btn btn-outline-success btn-pill" href="https://" target="_blank">Soon &rarr;</a>
+					  <a class="btn btn-outline-success btn-pill" href="https://" style="float: right; target="_blank">Try now &rarr;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                  <div class="card mb-4">
+                    <img class="card-img-top" src="images/common/card-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h4 class="card-title">Dapp tool 3</h4>
+                      <p class="card-text">Introduction text</p>
+					  <br></br>
+                      <a class="btn btn-outline-success btn-pill" href="" target="_blank">Soon &rarr;</a>
+					  <a class="btn btn-outline-success btn-pill" href="https://" style="float: right; target="_blank">Try now &rarr;</a>
+                   
+				   </div>
+									
+                  </div>
+				  
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+		
+		<br></br>
+		<br></br>
+					<center>
+				<p> The latest news about the Teleports project can be found on the Teleports <a href="https://steemit.com/@teleports" target="_blank">Steemit</a> profile </p>
+				</center>	
+      </div>
+      <!-- / Our Blog Section -->
+		  <center>
+
+		  
+	
+
+
+	
+		  
+ 
+</div>
+</center>
+        </div>
+      </div>
+      <!-- / Features Section -->
+
+
+	  
+	  
+ 	  
+  
+
+	 
+	  
+	  
+
+	  
+      <!-- / Subscribe Section -->  
+
+
+
+	
+
+     
+	 
+
+	 
+
+
+
+
+	 
+      <!-- / Our Blog Section -->
+
+	  
+	
+
+
+
+<div class="glow"></div>
+<div class="particles">
+
+    <div class="rotate">
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="angle">
+            <div class="size">
+                <div class="position">
+                    <div class="pulse">
+                        <div class="particle">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+				
+			
+
+
+	  
+
+
+
+
+
+
+	
+
+	  
+	
+
+
+
+      <!-- Footer Section -->
+      <footer>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <img src="images/app-promo/teleports-logo.png" height="75" class="mr-2" alt="Steem Dapps to Android Phones Tablets & TV's">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://signup.steemit.com/" target="_blank" >Create Steem account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://steemit.com/@teleports" target="_blank" >@teleports</a>
+                </li>
+				</ul>
+            </div>
+          </div>
+        </nav>
+      </footer>
+      <!-- / Footer Section -->
+
+      <!-- JavaScript Dependencies -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
